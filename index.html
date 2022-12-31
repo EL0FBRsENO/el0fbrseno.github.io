@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Impostor Chooser</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     
 </head>
 <body>
-    
-    <button class="amogusButton" onclick="clicar()" >
-        amogus
-    </button>
-    
-    <div class="amogusImageContent">
-        <p class="amogusImage" id="photos"></p>
+    <div class="backgroundContent">
+        <audio id="clickSound" src="/sound/active.mp3"></audio>
+        <audio id="hoverSound" src="/sound/hover.mp3"></audio>
+        
+        <div class="ejectButtonContent">
+            <button class="ejectButton" id="ejectButton" onmouseover="hover()" onclick="active()">eject</button>
+        </div>
+
+        <div class="amogusButtonContent">
+            <button class="amogusButton" onmouseover="hover()" onclick="clicar()">imposter</button>
+        </div>
+        
+        <div class="spLeaderboardContent">
+            <table class="leaderboard">
+                <tr>
+                    <td>
+                        <span>Sus Percentage :</span>
+                        <p id="blue"></p>
+                        <p id="red"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="amogusImageContent" id="abugus">
+            <p class="amogusImage" id="photos"></p>
+            <span class="amogusText" id="spanLabel"></span>
+        </div>
     </div>
 </body>
 </html>
